@@ -8,4 +8,7 @@ function printXy(pt: Point) {
     console.log(pt.y)
 }
 
-printXy({x: 100, y: 100})
+printXy({ x: 100, y: 100 })
+
+
+type ID = number | string
