@@ -22,12 +22,9 @@ function getArea(shape: Shape) {
             return shape.sideLength ** 2;
         default:
             console.log(shape)
-            const _check: never = shape
+            const _check: string = shape
     }
 }
 
 getArea({ kind: 'circle', radius: 2 })
 
-
-const a = undefined
-const b: never = a
