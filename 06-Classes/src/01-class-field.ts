@@ -1,21 +1,6 @@
-class Point {
-    x: number
+class FieldEm { 
+    key: string = 'name'
     constructor() { 
-        this.x =111
+        this.key = 'age'
     }
 }
-const pt = new Point()
-
-// readonly
-class Person { 
-    readonly name!: string;
-    constructor() { 
-        this.name = 'Alice'
-    }
-    setName(s:string) { 
-        // this.name = s   //error
-    }
-}
-
-const person = new Person
-// person.name = 'bob'   // error

@@ -1,19 +1,28 @@
-class C { 
-    _length = 0
-    get length() { 
-        return this._length
+class GettersEm {
+     _length = 0
+    get length() {
+        return 'aaaa'
     }
-    set length(value) { 
-        this._length = value
+    set length(value) {
+        this.length = value
     }
 }
 
-class ReadonlyC { 
-    y!: number;
-    get() { 
-        return this.y
+let getterInstance = new GettersEm()
+
+class Thing { 
+    _size = 0
+    get size(): number { 
+        return this._size
+    }
+    set size(value: any) { 
+        // if (!Number.isFinite(value)) { 
+        //     this._size = 0
+        //     return
+        // }
+        this._size = value
     }
 }
-const readonlyInstance = new ReadonlyC
-readonlyInstance.y = 100
-console.log(readonlyInstance)
+const thingInstance = new Thing()
+thingInstance.size = [1,2,3]
+console.log(thingInstance.size)
