@@ -9,7 +9,9 @@ function printName(obj: { first: string, last?: string }) {
     //     console.log(obj.last?.toLocaleLowerCase())
     // }
     // or
-    obj.last?.toLocaleLowerCase()
+    const b = obj.last?.toLocaleLowerCase()
+    console.log(b)
+    // console.log
 }
 printName({ first: 'bob' })
 printName({ first: 'Alice', last:'Assion' })

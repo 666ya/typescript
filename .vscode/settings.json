@@ -1,3 +1,13 @@
 {
-    "workbench.sideBar.location": "left"
+    "workbench.sideBar.location": "left",
+    "terminal.integrated.automationProfile.windows": {
+     "GitBash": {
+      "path": "D:\\git\\Git\\bin\\bash.exe"
+    }
+    },
+    "terminal.integrated.env.windows": {
+     "GitBash": {
+      "path": "D:\\git\\Git\\bin\\bash.exe"
+    }
+    }
 }
