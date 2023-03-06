@@ -14,6 +14,6 @@ function myForEach(arr: any[], callback: (arg: any, index: number) => void) {
 myForEach([1, 2, 3], (a, i) => console.log(a, i))
 
 
-function optionFn(x?:number= 2) {
+function optionFn(x:number= 2) {
     console.log(x)
 }

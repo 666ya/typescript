@@ -5,7 +5,7 @@
 // a = 'aaa'
 
 
-function firstEelment<T>(array: T[]): T | undefined { 
+function firstEelment<T>(array: T[]): T | undefined {  
     return array[0]
 }
 let a = firstEelment([1, 2, 3])
