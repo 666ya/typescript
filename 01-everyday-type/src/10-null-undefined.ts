@@ -1,3 +1,5 @@
-function printList(x: number  | null ) {
+function printList(x?: number ) {
    console.log(x!.toFixed())
 }
+
+printList()
