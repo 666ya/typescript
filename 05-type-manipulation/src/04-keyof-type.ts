@@ -1,24 +1,13 @@
-type Point = { x: number, y: number, z: boolean }
-type P = keyof Point
+type Point = {x: number;y: number}
 
-const test: P = 'z'
-function printP(x: P) { 
-    console.log(x)
+type P =  keyof Point
+let p1: P = 'x'
+
+
+type Arrayish = { 
+    [n:number] : any
+    age: string
 }
-printP('x')
 
-
-type Arrayish = { [n: number]: unknown }
 type A = keyof Arrayish
-function printA(x: A) { 
-    console.log(x)
-}
-
-
-type Mapish = {
-    [k: string | 'x'] : boolean
-}
-type M = keyof Mapish
-const testM: M = 123
-const testM1: M = '123'
-const testM2: M = 'x'
+const keyOfValue: A = 'age'
