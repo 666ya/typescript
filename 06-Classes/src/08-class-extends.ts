@@ -43,17 +43,17 @@
 // instance.greet()
 
 // 初始化顺序
-// class OrderBase  {
-//     name = 'hello'
-//     constructor() {
-//         console.log(this.name)
-//         this.name = 'wrold'
-//     }
-// }
-// class OrederSub { 
-//     name = 'subHello'
-// }
-// const order = new OrederSub()
+class OrderBase  {
+    name = 'hello'
+    constructor() {
+        console.log(this.name)
+        this.name = 'wrold'
+    }
+}
+class OrederSub { 
+    name = 'subHello'
+}
+const order = new OrederSub()
 
 
 // 继承内置类型
@@ -69,3 +69,28 @@ class MsgError extends Error {
 
 const msgError = new MsgError('hell0')
 msgError.sayHello()
+
+
+
+
+interface Animal {
+    dateOfBirth: any
+}
+interface Dog extends Animal {
+    breed: any
+}
+class AnimalHouse {
+   resident: Animal
+   name: string | number
+   constructor(animal: Animal,name:string | number) {
+    this.resident = animal
+    this.name = name
+   }
+}
+class DogHouse extends AnimalHouse {
+    declare resident: Dog
+    declare name: number
+   constructor(dog: Dog, name: string){
+    super(dog,name)
+   }
+}

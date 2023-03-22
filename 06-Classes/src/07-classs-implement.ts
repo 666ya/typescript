@@ -23,5 +23,14 @@ class ImplementEm2 implements Property2 {
     y = 1
 }
 
+interface Checkable {
+    check(name:string) : boolean
+}
+class ImplementEm3 implements Checkable {
+    check(s:string) {
+        return s.toLowerCase() === 'ok'
+    }
+}
+
 
 
