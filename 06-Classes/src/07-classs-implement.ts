@@ -33,4 +33,12 @@ class ImplementEm3 implements Checkable {
 }
 
 
+class ImplaeClass {
+    y = 1
+}
+class ImplementEm4 implements ImplaeClass {
+    y = 3
+}
+
+
 

@@ -7,3 +7,13 @@ class GenericClass<Type> {
     private x: Type
 }
 const genericInstance = new GenericClass('hello')
+
+
+
+class BoxStatic<Type> {
+    static contents: Type
+    constructor(c: Type) {
+        BoxStatic.contents = c
+    }
+
+}

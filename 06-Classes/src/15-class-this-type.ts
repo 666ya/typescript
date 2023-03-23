@@ -1,34 +1,23 @@
-// class Box {
-//     content: string = ''
-//     set(value: string) {
-//         this.content = value
-//         return this
-//     }
-// }
-// class ClearBox extends Box {
-//     clear() {
-//         this.content = ''
-//     }
-// }
-// const boxBase = new Box()
-// const clearBoxInsance = new ClearBox()
-// // const returnValue = boxBase.set('hello')
-// // console.log(returnValue)
-// const returnValue1 = new ClearBox()
-// returnValue1.set('')
-// console.log(returnValue1)
-
-class Box { 
-    content: string = ''
-    sameAs(other: this) { 
-        console.log(this)
-        return other.content === this.content
+class Box {
+    contents:string = ''
+    set(value: string) {
+        this.contents = value
+        return  this;
+    }
+    sameAs(other: this) {
+        return other.contents === this.contents
     }
 }
-class DerivedBox extends Box { 
-    otherContent: string = '?'
-}
-const boxInstance = new Box()
-const derivedBoxInstance = new DerivedBox()
 
-// console.log(derivedBoxInstance.sameAs(boxInstance))  // error
+class ClearableBox extends Box {
+    othetContents:string = "?"
+    clear(){
+        this.contents = ''
+    }
+}
+
+
+const base = new Box()
+const derived = new ClearableBox()
+const derived1 = new ClearableBox()
+derived.sameAs(derived1)
